@@ -1,0 +1,16 @@
+/home/rizzy/Documents/Zed_Projects/VHDL/alu.vhd {0 {vcom -work work -2008 -explicit -source -cover sbce3 -stats=none /home/rizzy/Documents/Zed_Projects/VHDL/alu.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity alu
+-- Compiling architecture rtl of alu
+###### /home/rizzy/Documents/Zed_Projects/VHDL/alu.vhd(14): 	output: case sel generate
+** Error: /home/rizzy/Documents/Zed_Projects/VHDL/alu.vhd(14): (vcom-1532) Expression in CASE GENERATE statement must be globally static.
+###### /home/rizzy/Documents/Zed_Projects/VHDL/alu.vhd(62): end rtl;
+** Note: /home/rizzy/Documents/Zed_Projects/VHDL/alu.vhd(62): VHDL Compiler exiting
+
+} {12.0 13.0} {}}

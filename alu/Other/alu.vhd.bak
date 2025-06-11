@@ -1,0 +1,62 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity alu is 
+port (
+	in1, in2, sel: in std_logic_vector(3 downto 0); 
+	out1: out std_logic_vector(3 downto 0));
+end entity alu;
+
+architecture rtl of alu is
+begin
+	output: case sel generate
+		when "0000" => -- nothing
+			out1 <= "0000";
+		when "0001" => -- addition
+			out1 <= in1 + in2;
+		when "0010" => -- subtraction
+			out1 <= in1 - in2;
+/*
+			process (in1, in2) is
+			begin
+				if high1: (in1 > in2) then
+					out1 <= in1 - in2;
+				elsif high2: (in1 < in2) then
+					out1 <= in2 - in1;
+				else none: then
+					out1 <= "0000";
+				end if;
+			end process;*/
+		when "0011" => -- output input 1
+			out1 <= in1;
+		when "0100" => -- output input 2
+			out1 <= in2;
+		when "0101" => -- logical AND
+			out1 <= in1 and in2;
+		when "0110" => -- logical OR
+			out1 <= in1 or in2;
+		when "0111" => -- logical NOT
+			out1 <= not in1;
+		when "1000" => -- logical NAND
+			out1 <= in1 nand in2;
+		when "1001" => -- logical NOR
+			out1 <= in1 nor in2;
+		when "1010" => -- logical XOR
+			out1 <= in1 xor in2;
+		when "1011" => -- logical XNOR
+			out1 <= in1 xnor in2;
+		when "1100" => -- ?
+			out1 <= "0000";
+		when "1101" => -- ?
+			out1 <= "0000";
+		when "1110" => -- ?
+			out1 <= "0000";
+		when "1111" => -- ?
+			out1 <= "0000";
+		when others =>
+			out1 <= "0000";
+		
+	end;
+end rtl;
