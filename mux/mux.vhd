@@ -10,5 +10,9 @@ end entity mux;
 
 architecture rtl of mux is
 begin
-	out1 <= in1 when (sel = '1') else in2;
+    --out1 <= in1 when s = '0' else in2; -- Alternative method.
+    with sel select
+        out1 <= in1 when '1',
+                in2 when '0',
+                '_' when others; -- optimise circuit.
 end rtl;
