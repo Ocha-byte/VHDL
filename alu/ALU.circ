@@ -135,14 +135,6 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="Subtraction"/>
     </comp>
-    <comp lib="0" loc="(1910,2300)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="Multiplication"/>
-    </comp>
-    <comp lib="0" loc="(1910,2330)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="Division"/>
-    </comp>
     <comp lib="1" loc="(3100,2510)" name="AND Gate">
       <a name="facing" val="south"/>
     </comp>
