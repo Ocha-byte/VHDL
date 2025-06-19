@@ -1,3 +1,5 @@
+-- 4-Bit Parallel access shift register - shift to the right
+
 Library ieee;
 use ieee.std_logic_1164.all;
 
